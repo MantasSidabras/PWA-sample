@@ -22,7 +22,7 @@
     window.addEventListener('load', async () => {
       if ('serviceWorker' in navigator) {
         try {
-          const registration = await navigator.serviceWorker.register('/sw.js', { scope: '/PWA-sample/public/'});
+          const registration = await navigator.serviceWorker.register('/PWA-sample/public/sw.js', { scope: '/PWA-sample/public/'});
           console.log('ServiceWorker registration successful with scope: ', '/PWA-sample/public/');
           const notificationPermission = await Notification.requestPermission();
           if (notificationPermission !== 'granted') {
